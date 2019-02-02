@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="theme-color" content="#2196f3">
+        <title>收发货APP</title>
+        <link rel="stylesheet" href="../libs/css/framework7.material.css">
+        <link rel="stylesheet" href="../libs/css/framework7.material.colors.css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../libs/css/material-icons.css">
+        <link rel="stylesheet" href="../libs/css/kitchen-sink.css">
+
+        <!--自定义-->
+        <link rel="stylesheet" href="../css/app/public.css">
+        <link rel="stylesheet" href="../css/app/orderDetails.css">
+
+        <link rel="icon" href="../libs/img/icon.png">
+    </head>
+
+    <body>
+        <div class="panel panel-right panel-reveal">
+            <div class="view view-right">
+                <div class="pages navbar-fixed"></div>
+            </div>
+        </div>
+        <div class="views">
+            <div class="view view-main">
+                <div class="pages navbar-fixed">
+                    <div data-page="orderDetails" class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="left">
+                                    <a class="back link icon-only"><i class="icon icon-back"></i></a>
+                                </div>
+                                <div class="title">待收货单详情</div>
+                            </div>
+                        </div>
+                        <div class="toolbar tabbar">
+                            <div class="toolbar-inner">
+                                <a href="#tab-1" class="tab-link active">产品信息</a>
+                                <a href="#tab-2" class="tab-link">基本信息</a>
+                                <a href="#tab-3" class="tab-link">物流信息</a>
+                            </div>
+                        </div>
+                        <div class="page-content detailsContainer orderDetailsContainer font_m">
+                            <div id="orderDetails-view" class="font_s">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 待收货详情模板 -->
+        <script type="text/template7" id="orderDetailsTemplate">
+            <div class="tabs">
+                <div id="tab-1" class="tab active">
+                    <div class="content-block">
+                        <div class="content-block-title deliver" data-deliverecmid="{{deliverEcmId}}" data-delivername="{{d.name}}">发货方：{{d.name}}</div>
+                        <div class="data-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="label-cell">产品名称</th>
+                                        <th class="numeric-cell">数量</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each goods}}
+                                    <tr>
+                                        <td class="label-cell" style="padding-right: 6px;">{{this.good.msg}}</td>
+                                        <td class="numeric-cell" style="padding-left: 6px;">{{this.count}}箱</td>
+                                    </tr>
+                                    {{/each}}
+            
+                                </tbody>
+                            </table>
+                            <p class="count">共{{count}}箱</p>
+                        </div>
+                        <div class="content-block">
+                            <a class="button button-raised button-fill color-blue">
+                                <span><i class="material-icons">fullscreen</i>&nbsp;&nbsp;扫码收货</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-2" class="tab">
+                    <div class="content-block">
+                        <p class="row">
+                            <span class="col-30">发货方：</span>
+                            <span class="col-70">{{d.name}}</span>
+                        </p>
+                        <p class="row">
+                            <span class="col-30">发货时间：</span>
+                            <span class="col-70">{{yyyyMMddHHmm ceatetime}}</span>
+                        </p>
+                        <p class="row">
+                            <span class="col-30">发货操作员：</span>
+                            <span class="col-70">{{deliverPersonName}}</span>
+                        </p>
+                        <p class="row">
+                            <span class="col-30">联系电话：</span>
+                            <span class="col-70">{{deliverPersonPhone}}</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="tab-3" class="tab">
+                    <div class="content-block">
+                        <p class="row hide">
+                            <span class="col-30">发货单号：</span>
+                            <span class="col-70 deliverSn">{{deliverSn}}</span>
+                        </p>
+                        <p class="row">
+                            <span class="col-30">发货时间：</span>
+                            <span class="col-70">{{yyyyMMddHHmm ceatetime}}</span>
+                        </p>
+                        <p class="row">
+                            <span class="col-30">物流公司：</span>
+                            <span class="col-70">{{company.name}}</span>
+                        </p>
+                        <p class="row">
+                            <span class="col-30">物流单号：</span>
+                            <span class="col-70 logisticsSn">{{company.logisticsSn}}</span>
+                        </p>
+                        <p class="row">
+                            <span class="col-30">车牌号：</span>
+                            <span class="col-70">{{carNo}}</span>
+                        </p>
+                        <p class="row">
+                            <span class="col-30">司机：</span>
+                            <span class="col-70">{{driverName}}</span>
+                        </p>
+                        <p class="row">
+                            <span class="col-30">联系电话：</span>
+                            <span class="col-70">{{driverMobile}}</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content-block-title deliver hide" data-deliverecmid="{{deliverEcmId}}" data-delivername="{{d.name}}">发货方：{{d.name}}</div>
+            <div class="data-table hide">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="label-cell">产品名称</th>
+                            <th class="numeric-cell">数量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each goods}}
+                        <tr>
+                            <td class="label-cell" style="padding-right: 6px;">{{this.good.msg}}</td>
+                            <td class="numeric-cell" style="padding-left: 6px;">{{this.count}}箱</td>
+                        </tr>
+                        {{/each}}
+
+                    </tbody>
+                </table>
+                <p class="count">共{{count}}箱</p>
+                <div class="content-block">
+                    <a class="button button-raised button-fill color-blue">
+                        <span><i class="material-icons">fullscreen</i>&nbsp;&nbsp;扫码收货</span>
+                    </a>
+                </div>
+            </div>
+            <p class="row hide">
+                <span class="col-30">发货单号：</span>
+                <span class="col-70 deliverSn">{{deliverSn}}</span>
+            </p>
+            <p class="row hide">
+                <span class="col-30">发货时间：</span>
+                <span class="col-70">{{yyyyMMddHHmm ceatetime}}</span>
+            </p>
+            <p class="row hide">
+                <span class="col-30">物流公司：</span>
+                <span class="col-70">{{company.name}}</span>
+            </p>
+            <p class="row hide">
+                <span class="col-30">物流单号：</span>
+                <span class="col-70 logisticsSn">{{company.logisticsSn}}</span>
+            </p>
+            <p class="row hide">
+                <span class="col-30">车牌号：</span>
+                <span class="col-70">{{carNo}}</span>
+            </p>
+            <p class="row hide">
+                <span class="col-30">司机：</span>
+                <span class="col-70">{{driverName}}</span>
+            </p>
+            <p class="row hide">
+                <span class="col-30">联系电话：</span>
+                <span class="col-70">{{driverMobile}}</span>
+            </p>
+            <div class="content-block hide">
+                <a class="button button-raised button-fill color-blue">
+                    <span><i class="material-icons">fullscreen</i>&nbsp;&nbsp;扫码收货</span>
+                </a>
+            </div>
+        </script>
+        <script src="../libs/js/framework7.js"></script>
+        <script src="../js/app/helper.js"></script>
+        <script src="../libs/js/kitchen-sink.js"></script>
+        <script src="../js/plugin/pluginWebview.js"></script>
+        <script src="../js/plugin/pluginOkHttpRequest.js"></script>
+        <script src="../js/plugin/pluginPermission.js"></script>
+        <script src="../js/common/pageControl.js"></script>
+        <script src="../js/common/serviceConfig.js"></script>
+        <script src="../js/myApp.js"></script>
+        <script src="../js/app/orderDetails.js"></script>
+
+    </body>
+
+</html>

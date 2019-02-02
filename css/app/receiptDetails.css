@@ -1,0 +1,18 @@
+.detailsContainer .data-table thead th,
+.detailsContainer .data-table tbody td {
+	height: 32px!important;
+}
+.receiptDetailsContainer .col-30 {
+	margin-left: 15px;
+	
+}
+.receiptDetailsContainer .row {
+	margin: 4px 0;	
+}
+
+.receiptDetailsContainer .count{
+    margin-top: 0;
+    border-top: 1px solid #ddd;
+    text-align: right;
+    padding: 2px 24px 10px 0;
+}

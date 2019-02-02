@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="theme-color" content="#2196f3">
+        <title>收发货APP</title>
+        <link rel="stylesheet" href="../libs/css/framework7.material.css">
+        <link rel="stylesheet" href="../libs/css/framework7.material.colors.css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../libs/css/material-icons.css">
+        <link rel="stylesheet" href="../libs/css/kitchen-sink.css">
+
+        <!--自定义-->
+        <link rel="stylesheet" href="../css/app/public.css">
+        <link rel="stylesheet" href="../css/app/personalCenter.css">
+
+        <link rel="icon" href="../libs/img/icon.png">
+    </head>
+
+    <body>
+        <div class="panel panel-right panel-reveal">
+            <div class="view view-right">
+                <div class="pages navbar-fixed"></div>
+            </div>
+        </div>
+        <div class="views">
+            <div class="view view-main">
+                <div class="pages navbar-fixed">
+                    <div data-page="orderList" class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="left">
+                                    <a class="back link icon-only"><i class="icon icon-back"></i></a>
+                                </div>
+                                <div class="title">个人中心</div>
+
+                            </div>
+                        </div>
+                        <div class="page-content personalCenterContainer">
+
+                            <div class="photo">
+                                <img class="img" src="../libs/img/beach.jpg" />
+                            </div>
+
+                            <div class="list-block media-list">
+                                <ul>
+                                    <li>
+                                        <span href="#" class="item-link item-content" name="account">
+                                        <div class="item-media col-30">用户账号</div>
+                                        <div class="item-inner user-name">admin1234</div>
+                                    </span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link item-content" name="nickname">
+                                            <div class="item-media col-30">用户昵称</div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">小丸子</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="item-link item-content" name="realName">
+                                            <div class="item-media col-30">真实姓名</div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">winnie</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link item-content" name="gender">
+                                            <div class="item-media col-30">用户性别</div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">女</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link item-content" name="mobile">
+                                            <div class="item-media col-30">手机号码</div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">18700000000</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link item-content" name="email">
+                                            <div class="item-media col-30">电子邮箱</div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">123@qq.com</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="item-link item-content" name="password">
+                                            <div class="item-media col-30">修改密码</div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title password"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="logout">
+                                <p class="buttons-row">
+                                    <a href="#" class="button color-red">注销</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../libs/js/framework7.js"></script>
+        <script src="../js/app/helper.js"></script>
+        <script src="../libs/js/kitchen-sink.js"></script>
+        <script src="../js/plugin/pluginWebview.js"></script>
+        <script src="../js/plugin/pluginOkHttpRequest.js"></script>
+        <script src="../js/common/serviceConfig.js"></script>
+        <script src="../libs/md5.js"></script>
+        <script src="../js/common/pageControl.js"></script>
+        <script src="../js/myApp.js"></script>
+        <script src="../js/app/personalCenter.js"></script>
+    </body>
+
+</html>

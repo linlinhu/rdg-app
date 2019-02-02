@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="theme-color" content="#2196f3">
+        <title>已收货列表</title>
+        <link rel="stylesheet" href="../libs/css/framework7.material.css">
+        <link rel="stylesheet" href="../libs/css/framework7.material.colors.css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../libs/css/material-icons.css">
+        <link rel="stylesheet" href="../libs/css/kitchen-sink.css">
+
+        <!--自定义-->
+        <link rel="stylesheet" href="../css/app/public.css">
+        <link rel="stylesheet" href="../css/app/receiptList.css">
+
+        <link rel="icon" href="../libs/img/icon.png">
+    </head>
+
+    <body>
+        <div class="panel panel-right panel-reveal">
+            <div class="view view-right">
+                <div class="pages navbar-fixed"></div>
+            </div>
+        </div>
+        <div class="views">
+            <div class="view view-main">
+                <div class="pages navbar-fixed">
+                    <div data-page="receiptList" class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner receiptTitle">
+                                <div class="left">
+                                    <a class="back link icon-only"><i class="icon icon-back"></i></a>
+                                </div>
+                                <div class="title">已收货清单</div>
+                                <div class="right"><i class="material-icons">search</i></div>
+                            </div>
+                        </div>
+                        <div class="page-content listContainer receiptListContainer infinite-scroll pull-to-refresh-content" data-distance="50">
+                            <div class="pull-to-refresh-layer">
+                              <div class="preloader"></div>
+                              <div class="pull-to-refresh-arrow"></div>
+                            </div>
+                            <div id="receiptList-view" class="font_m"></div>
+                            <div class="infinite-scroll-preloader hide">
+                                <div class="preloader"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 已收货列表模板 -->
+        <script type="text/template7" id="receiptListTemplate">
+            {{#each data}}
+            <div class="card" data-id='{{this.logisticsSn}}'>
+                <div class="card-header">收货时间：{{yyyyMMddHHmm this.ceatetime}}</div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="row">
+                            <div class="col-30 left">
+                                <p class="name">{{this.d.name}}</p>
+                            </div>
+                            <div class="col-70 right">
+                                {{#each this.goods}}
+                                <p>{{this.good.msg}}</p>
+                                {{/each}}
+                                <p>
+                                    <span class="count">共{{this.count}}箱</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </script>
+        <script src="../libs/js/framework7.js"></script>
+        <script src="../js/app/helper.js"></script>
+        <script src="../libs/js/kitchen-sink.js"></script>
+        <script src="../js/plugin/pluginOkHttpRequest.js"></script>
+        <script src="../js/common/serviceConfig.js"></script>
+        <script src="../js/common/pageControl.js"></script>
+        <script src="../js/myApp.js"></script>
+        <script src="../js/app/receiptList.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="theme-color" content="#2196f3">
+        <title>收发货APP</title>
+        <link rel="stylesheet" href="libs/css/framework7.material.css">
+        <link rel="stylesheet" href="libs/css/framework7.material.colors.css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="libs/css/material-icons.css">
+        <link rel="stylesheet" href="libs/css/kitchen-sink.css">
+
+        <!--自定义-->
+        <link rel="stylesheet" href="css/app/public.css">
+        <link rel="stylesheet" href="css/app/index.css">
+        <link rel="icon" href="libs/img/icon.png">
+    </head>
+
+    <body>
+        <div class="statusbar-overlay"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel panel-left panel-cover hide">
+            <div class="view navbar-fixed">
+                <div class="pages">
+                    <div data-page="panel-left" class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="center username">用户</div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="content-block-title font_m">用户中心</div>
+                           
+                            <a class="button color-red exit font_m"><i class="material-icons left">settings</i>退出</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="views">
+            <div class="view view-main">
+                <div class="pages navbar-fixed">
+
+                    <div data-page="index" class="page indexContainer">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="title">收发货APP</div>
+                                <div class="right hide">
+                                    <!--<a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a>-->
+                                    <a href="#" class="open-panel link icon-only"><i class="material-icons">person</i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+
+                            <div class="ks-grid index-cotainer">
+                                <div class="content-block">
+                                    <div class="row no-gutter above">
+                                        <div class="col-100 font_m">待收货
+                                            <span class="font_s hide"></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="row no-gutter below">
+                                        <div class="col-100 center font_m">已收货</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolbar toolbar-bottom">
+                            <div class="toolbar-inner">
+                                <a class="link wait"><i class="icon material-icons">email</i></a>
+                                <a class="link wait"><i class="icon material-icons">today</i></a>
+                                <a class="link wait"><i class="icon material-icons">file_upload</i></a>
+                                <a class="link personal" title="个人中心"><i class="material-icons">person</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="libs/js/framework7.js"></script>
+        <script src="libs/js/kitchen-sink.js"></script>
+        <script src="js/plugin/pluginOkHttpRequest.js"></script>
+        <script src="js/plugin/pluginWebview.js"></script>
+        <script src="js/plugin/pluginRuntime.js"></script>
+        <script src="js/common/serviceConfig.js"></script>
+        <script src="js/common/pageControl.js"></script>
+        <script src="js/app/public.js"></script>
+        <script src="js/app/index.js"></script>
+    </body>
+</html>

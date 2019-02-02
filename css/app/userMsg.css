@@ -1,0 +1,15 @@
+.logout {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    color: red;
+}
+.mobileContainer input {
+    width: 120px!important;
+    float: left;
+}
+.mobileContainer a {
+    width: 100px!important;
+    float: right;
+}
+

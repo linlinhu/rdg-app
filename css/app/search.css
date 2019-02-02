@@ -1,0 +1,11 @@
+.receiptTitle .right i,
+.receiptSearch .right i{
+    margin-right:16px;
+}
+.receiptSearch .left i{
+    margin-left:12px;
+}
+.receiptSearch input::-webkit-input-placeholder{
+    color:#ccc!important;
+    font-weight: normal!important;
+}

@@ -1,0 +1,69 @@
+.scanListContainer .above {
+	height: 40%;
+}
+.scanListContainer .below {
+    position: relative;
+    width: 100%;
+	height: 47%;
+	
+}
+.scanListContainer .buttons{
+    height: 13%;
+    margin: 0;
+}
+
+.scanListContainer li p {
+	display: inline-block;
+	margin:0;
+	width: 85%;
+	overflow-wrap: break-word;
+}
+.scanListContainer li {
+    margin:2px 0;
+}
+.scanListContainer li span {
+	margin:2px 15px 0 0;
+	float: right;
+}
+.scanListContainer li span i {
+	font-size: 18px;
+	color: white;
+	background: red;
+	border-radius: 100%;
+}
+.scanListContainer .content-block-title {
+    width: 100%;
+    position: fixed;
+    top: 45%;
+	margin: 0!important;
+	background: white;
+	padding: 10px 16px 4px 16px!important;
+	border-bottom: 1px solid #ddd;
+}
+.scanListContainer ul {
+	border: 1px solid transparent;
+	min-height: 40%;
+	padding-top: 15px!important;
+}
+.scanListContainer ul .tip {
+	margin: 40px 0;
+	margin-left: -15px;
+	text-align: center;
+}
+.modal{
+    top:60%!important;
+}
+.scanListContainer .buttons p{
+    margin: 0 16px;
+    padding-top:15px;
+}
+.open-flash i {
+    padding: 3px;
+    border-radius: 100% 100%; 
+}
+.bg-gary {
+   background: gray; 
+}
+.bg-lightgray {
+   background: lightgray;
+}

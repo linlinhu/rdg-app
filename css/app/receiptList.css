@@ -1,0 +1,14 @@
+.receiptTitle .right i{
+	margin-right:16px;
+}
+.receiptSearch .left i{
+    margin-left:12px;
+}
+.receiptListContainer .row .right p{
+    width: 100%;
+    
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+

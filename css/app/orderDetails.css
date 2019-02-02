@@ -1,0 +1,25 @@
+.detailsContainer .data-table thead th,
+.detailsContainer .data-table tbody td {
+	height: 32px!important;
+}
+.detailsContainer a span {
+	display: inline-block;
+}
+.detailsContainer i {
+	float: left;
+	margin-top: 5px;
+}
+
+.orderDetailsContainer .col-30 {
+    margin-left: 15px;
+    
+}
+.orderDetailsContainer .row {
+    margin: 4px 0;  
+}
+.orderDetailsContainer .count{
+    margin-top: 0;
+    border-top: 1px solid #ddd;
+    text-align: right;
+    padding: 2px 24px 10px 0;
+}

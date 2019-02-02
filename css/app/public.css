@@ -1,0 +1,68 @@
+.content-block-title {
+	padding-top: 0;
+}
+li {
+	list-style: none;
+}
+ul {
+	padding: 0 0 0 15px!important;
+}
+.modal-title .modal-text {
+	font-size: 14px!important;
+}
+.modal-text p {
+	margin: 0!important;
+}
+.hide {
+	display: none!important;
+}
+.font_l{
+	font-size: 18px;
+}
+.font_m{
+	font-size: 16px;
+}
+.font_s{
+	font-size: 14px;
+}
+
+//列表样式
+.listContainer .card {
+	margin: 12px 8px;
+}
+.listContainer .card-header,
+.listContainer .card-content p,
+.listContainer .card-footer {
+	font-size: 14px;
+}
+.listContainer .material-icons {
+	float: left;
+	margin-top: 5px;
+}
+.listContainer .card-content p {
+	margin: 5px 0 5px 5px;
+}
+.listContainer .card-content-inner {
+	padding: 0 10px;
+}
+.listContainer .right{
+	padding-left: 5px;
+	border-left: 1px solid #ddd;
+}
+.listContainer .count {
+	float: right;
+	color: red;
+}
+.listContainer .card-header,
+.listContainer .card-footer {
+	min-height: 0;
+}
+
+.navbar .title {
+    padding-left: 16px;
+    font-size: 18px;
+}
+.no-data{
+    text-align: center;
+    margin-top: 10%;
+}
